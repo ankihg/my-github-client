@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/ankihg/my-github-client#readme",
   "dependencies": {
-    "angular": "^1.5.3"
+    "angular": "^1.5.3",
+    "express": "^4.13.4"
   },
   "devDependencies": {
     "css-loader": "^0.23.1",
