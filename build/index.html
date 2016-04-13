@@ -5,8 +5,13 @@
   </head>
   <body data-ng-app="app">
 
-    <section data-ng-controller="GitHubController as githubCtrl">
+    <section data-ng-controller="GitHubController as githubCtrl" data-ng-init="githubCtrl.authenticate()">
       {{githubCtrl.plz}}
+
+      <section data-ng-init="githubCtrl.getRepos()">
+
+      </section>
+
     </section>
 
     <script src="./bundle.js"></script>
