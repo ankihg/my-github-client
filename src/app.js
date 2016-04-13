@@ -7,6 +7,7 @@ angular.module('app', [])
     this.url = 'https://api.github.com';
     this.userPath = this.url + '/user';
     this.githubToken = localStorage.githubToken;
+    this.repos = [];
 
     this.authenticate = function() {
       console.log('authenticate');
@@ -33,9 +34,8 @@ angular.module('app', [])
       }
       $http(req)
         .then(function(res) {
-          console.log(res.body);
-          console.log(res.data);
-        })
+          this.repos = res.data;
+        }.bind(this))
         .catch(function(err) {
           console.log(err);
         });

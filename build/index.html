@@ -9,6 +9,13 @@
       {{githubCtrl.plz}}
 
       <section data-ng-init="githubCtrl.getRepos()">
+        <ul data-ng-model="githubCtrl.repos">
+          <li data-ng-repeat="repo in githubCtrl.repos">
+            {{repo.name}}
+          </li>
+
+
+        </ul>
 
       </section>
 
