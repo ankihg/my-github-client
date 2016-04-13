@@ -87,6 +87,22 @@
 	        });
 	    };
 
+	    this.getUserInfo = function() {
+	      var req = {
+	        method: 'GET',
+	        url: this.url + '/users/ankihg',
+	        headers: {'Authorization': 'token ' + this.githubToken}
+	      }
+	      $http(req)
+	        .then(function(res) {
+	          this.userInfo = res.data;
+	          console.log(this.userInfo);
+	        }.bind(this))
+	        .catch(function(err) {
+	          console.log(err);
+	        })
+	    }
+
 	  }]);
 
 

@@ -8,10 +8,22 @@
     <section data-ng-controller="GitHubController as githubCtrl" data-ng-init="githubCtrl.authenticate()">
       {{githubCtrl.plz}}
 
+      <section data-ng-init="githubCtrl.getUserInfo()">
+        <img src={{githubCtrl.userInfo.avatar_url}} align="left">
+        <h2>about me</h2>
+        name: {{githubCtrl.userInfo.name}} </br>
+        username: {{githubCtrl.userInfo.login}} </br>
+        followers: {{githubCtrl.userInfo.followers}} </br>
+        following: {{githubCtrl.userInfo.following}}  </br>
+      </section>
+
       <section data-ng-init="githubCtrl.getRepos()">
+        <h2>my repos</h2>
         <ul data-ng-model="githubCtrl.repos">
           <li data-ng-repeat="repo in githubCtrl.repos">
-            {{repo.name}}
+            <a href={{repo.url}}><h3>{{repo.name}}</h3></a>
+            <small>created </small>{{repo.created_at}}</br>
+            <small>updated </small>{{repo.updated_at}}
           </li>
 
 
