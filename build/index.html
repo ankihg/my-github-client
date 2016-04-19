@@ -6,9 +6,9 @@
   <body data-ng-app="app">
 
     <section data-ng-controller="GitHubController as githubCtrl" data-ng-init="githubCtrl.authenticate()">
-      {{githubCtrl.plz}}
-
       <section data-ng-init="githubCtrl.getUserInfo()">
+        <h2>WELCOME</h2>
+
         <img src={{githubCtrl.userInfo.avatar_url}} align="left">
         <h2>about me</h2>
         name: {{githubCtrl.userInfo.name}} </br>

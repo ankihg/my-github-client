@@ -1,4 +1,6 @@
 const angular = require('angular');
+require('style!css!./styles/mystyle.css');
+
 
 angular.module('app', [])
   .controller('GitHubController', ['$http', function($http) {
