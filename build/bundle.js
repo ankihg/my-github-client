@@ -30870,7 +30870,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  background-color: #00ff00;\n  color: #0000ff;\n}\n", ""]);
+	exports.push([module.id, "body {\n  background-color: #777799;\n  color: #073407;\n}\n\nsection {\n  border-style: solid;\n  padding: 1%;\n}\n\nimg {\n  width: 10%;\n  height: 10%;\n}\n\nh1 {\n  text-align: center;\n}\n\nh3 {\n  display: inline;\n}\n", ""]);
 
 	// exports
 
